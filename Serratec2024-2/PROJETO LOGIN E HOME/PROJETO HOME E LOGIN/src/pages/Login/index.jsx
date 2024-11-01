@@ -1,7 +1,8 @@
-import { Button } from "../../components/Button";
+import ButtonComponent from "../../components/ButtonComponents";
 import { InputField } from "../../components/InputField";
 import { Container, Tittle, ContentForms } from "./style";
 import 'bootstrap/dist/css/bootstrap.css';
+import logo from '../../assets/images/linkedin-logologotyp-us-1.png';
 
 export const Login = () => {
   const handleLogin = () => {
@@ -10,35 +11,21 @@ export const Login = () => {
 
   return (
     <Container>
-      {/* Menu de Navegação */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a className="navbar-brand" href="#">
-          <img 
-            src="./src/assets/images/linkedin-logologotyp-us-1.png" 
-            alt="Logo" 
-            style={{ width: '250px', height: '200px' }} 
-          />
-        </a>
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-toggle="collapse" 
-          data-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <div >
+          <a className="navbar-brand" href="#">
+            <img 
+              src={logo}
+              alt="Logo" 
+              style={{ width: '250px', height: '200px', paddingLeft: '50px', paddingRight: '10px'}} 
+            />
+          </a>
+        </div>
+    
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <img 
-                src="./src/assets/images/artigo.png" 
-                alt="icone artigos" 
-                className="nav-effect" 
-                style={{ width: '30px', height: '30px' }} 
-              />
+              <img src="./src/assets/images/artigo.png" alt="icone artigos" className="nav-effect" style={{ width: '30px', height: '30px' }} />
               <a className="nav-link nav-effect" href="#">Artigos</a> 
             </li>
             <li className="nav-item active">
@@ -87,33 +74,28 @@ export const Login = () => {
               <a className="nav-link nav-effect" href="#">Baixe o aplicativo</a>
             </li>
           </ul>
-
-          <div className="btn-group me-2" role="group" aria-label="Group for buttons">
-            <button type="button" className="btn btn-primary">Entrar</button>
           
-          </div>
           <div className="btn-group me-2" role="group" aria-label="Group for buttons">
-          
-            <button type="button" className="btn btn-secondary">Cadastrar</button>
+               <ButtonComponent title="Cadastre-se agora " handleFunction={() => alert("Cadastrar")} variant="secondary" />
+                <ButtonComponent title="Entrar" handleFunction={handleLogin} variant="primary" />
+         
           </div>
         </div>
       </nav>  
 
-     <div>
-      <div style={{ display: 'flex', marginTop: '80px', alignItems: 'flex-start', padding: '20px' }}>
-        <ContentForms style={{ marginRight: '20px' }}>
-          <Tittle>Conheça sua comunidade profissional</Tittle>
-          
-          <InputField placeholder="Digite seu login" type="email" />
-          <InputField placeholder="Digite sua senha" type="password" />
-          <Button title="Entrar" handleFunction={handleLogin} />
-        </ContentForms>
-      </div>
-        <div className="text-center">
+      <div style={{ display: 'flex',justifyContent:"space-between", padding: '20px' }}>
+        <div >
+          <ContentForms >
+            <Tittle>Conheça sua comunidade profissional</Tittle>
+            <ButtonComponent title="Continue as Marina"/>
+            <InputField placeholder="Digite sua senha" type="password" />
+          </ContentForms>
+        </div>
+        <div className="text-center" style={{padding: '20px'}}>
           <img 
             src="./src/assets/images/image.png" 
             alt="imagem central linkedin" 
-            style={{ width: '100%', height: '100%' }} 
+            style={{ width: '100%', height: '100%'  }} 
           />
         </div>
       </div>

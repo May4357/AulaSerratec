@@ -1,14 +1,11 @@
-import { ButtonComponents } from "../ButtonComponents"
+import { ButtonComponents } from "../ButtonComponents";
 
-export const ContainerText = ({children, nome}) => {
-
+export const ContainerText = ({ children, nome }) => {
   return (
     <div>
-      {/* <ButtonComponents nome="Botao no ContainerText"/> */}
-
-      Titulo do modal {nome}
-
+      <h1>Título do modal: {nome}</h1>
       {children}
+      <ButtonComponents nome="Botão no ContainerText" />
     </div>
-  )
-}
+  );
+};
