@@ -1,35 +1,80 @@
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column; /* Muda a direção da barra de navegação para coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-  }
-
-  .content-forms {
-    margin-top: 60px; /* Ajusta o espaço acima do formulário */
-  }
-
-  .btn-group {
-    flex-direction: column; /* Torna os botões empilhados em telas menores */
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  display:flex;
+  
 }
 
+
 @media (max-width: 768px) {
-  .btn-group {
-    width: 100%; /* Faz os botões ocuparem 100% da largura */
-  }
-
-  .btn-secondary,
-  .btn-primary {
-    width: 100%; /* Botões ocupam toda a largura da tela */
-    margin-bottom: 10px; /* Espaçamento entre os botões */
-  }
-
   .container {
-    width: 95%; /* Largura reduzida em telas pequenas */
-    padding: 10px; /* Adiciona um pouco de padding */
+    width: 95%;
+    padding: 10px;
   }
+}
+.nav-effect {
+  transition: filter 0.3s ease;
+  font-size: 20px;
+}
 
-  .content-forms {
-    padding: 0 10px; /* Adiciona padding nas laterais */
-  }
+.nav-effect:hover {
+  filter: brightness(0.8);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: calc(100% - 100px); 
+  margin: 50px auto; 
+  z-index: 1000;
+}
+
+.content-forms {
+  margin-top: 80px; 
+}
+
+
+.btn-group{
+display: flex;
+flex-direction: row ;
+gap: 10px;
+right:0px;
+}
+
+.btn-secondary{
+background-color: #004182;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+width:150px ;
+height: 50px;
+border-radius: 25px;
+
+
+}
+
+.btn-primary{
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style:bold;
+  color:#004182;
+  width:150px ;
+  height: 50px;
+  border-radius:25px;
+
+}
+
+.navbar-toggler{
+font-size: 100px;
+
 }

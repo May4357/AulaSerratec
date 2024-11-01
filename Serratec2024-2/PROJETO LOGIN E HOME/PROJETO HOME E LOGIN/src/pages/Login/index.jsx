@@ -97,15 +97,26 @@ export const Login = () => {
             <button type="button" className="btn btn-secondary">Cadastrar</button>
           </div>
         </div>
-      </nav>
+      </nav>  
 
-      {/* Formulário de Login */}
-      <ContentForms style={{ marginTop: '100px' }}>
-        <Tittle>Conheça sua comunidade profissional</Tittle>
-        <InputField placeholder="Digite seu login" type="email" />
-        <InputField placeholder="Digite sua senha" type="password" />
-        <Button title="Entrar" handleFunction={handleLogin} />
-      </ContentForms>
+     <div>
+      <div style={{ display: 'flex', marginTop: '80px', alignItems: 'flex-start', padding: '20px' }}>
+        <ContentForms style={{ marginRight: '20px' }}>
+          <Tittle>Conheça sua comunidade profissional</Tittle>
+          
+          <InputField placeholder="Digite seu login" type="email" />
+          <InputField placeholder="Digite sua senha" type="password" />
+          <Button title="Entrar" handleFunction={handleLogin} />
+        </ContentForms>
+      </div>
+        <div className="text-center">
+          <img 
+            src="./src/assets/images/image.png" 
+            alt="imagem central linkedin" 
+            style={{ width: '100%', height: '100%' }} 
+          />
+        </div>
+      </div>
     </Container>
   );
 };
