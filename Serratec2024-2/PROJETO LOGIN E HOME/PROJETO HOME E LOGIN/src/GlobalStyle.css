@@ -1,4 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column; /* Muda a direção da barra de navegação para coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .content-forms {
+    margin-top: 60px; /* Ajusta o espaço acima do formulário */
+  }
+
+  .btn-group {
+    flex-direction: column; /* Torna os botões empilhados em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-group {
+    width: 100%; /* Faz os botões ocuparem 100% da largura */
+  }
+
+  .btn-secondary,
+  .btn-primary {
+    width: 100%; /* Botões ocupam toda a largura da tela */
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+  }
+
+  .container {
+    width: 95%; /* Largura reduzida em telas pequenas */
+    padding: 10px; /* Adiciona um pouco de padding */
+  }
+
+  .content-forms {
+    padding: 0 10px; /* Adiciona padding nas laterais */
+  }
 }

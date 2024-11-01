@@ -1,9 +1,12 @@
-import { RequestApi } from "./pages/RequestApi"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const App = () => {
-  return (
-    <RequestApi />
+import {Login} from './pages/Login'
+
+export const App = () =>{
+  return(
+    <Login/>
   )
+
 }
 
 // Rotas - useContext
